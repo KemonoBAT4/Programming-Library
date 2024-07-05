@@ -4,34 +4,55 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grid with Invisible Squares</title>
-<body>
-    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <img src="image.png" alt="">
-        
-        <mask>
-            <foreignObject x="20" y="20" width="160" height="100">
-            <div xmlns="http://www.w3.org/1999/xhtml">
-                <p class="red">This is red color</p>
-                <p class="green">This is green color</p>
-            </div>
-            </foreignObject>
-        </mask>
-      </svg>
+  <body>
 
-      <style>
-        div {
-          background: pink;
-          font: 12px serif;
-          padding: 10px;
-        }
-        
-        .red {
-          color: red;
-        }
-        
-        .green {
-          color: green
-        }
-      </style>
-</body>
+    <div class="container" style="background-image: url('image.png');">
+      <div class="square transparent"></div>
+      <div class="square"></div>
+      <div class="square transparent"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+
+      <!-- Add more square divs as needed -->
+    </div>
+
+    <svg width="500" height="500">
+      <mask id="mask">
+        <rect x="0" y="0" width="500" height="500" fill="#fff" />
+        <circle cx="250" cy="250" r="50" fill="#000" />
+      </mask>
+    </svg>
+  </body>
+
+  <style>
+
+    .transparent {
+      background-color: green;
+    }
+
+    .container {
+      display: flex;
+    /* grid-template-columns: repeat(5, 1fr); */
+      width: 500px; /* adjust to your image size */
+      height: 500px; /* adjust to your image size */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .square {
+      width: 20%; /* adjust to your desired square size */
+      height: 20%;
+       background-color: red; /* default background color */
+      
+    }
+
+    .transparent {
+      background-color: green;
+    }
+
+    .square {
+      /*... other styles... */
+      mask: url(#mask);
+    }
+  </style>
 </html>
