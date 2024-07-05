@@ -43,3 +43,33 @@ https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject
 https://www.w3schools.com/tags/tag_img.asp
 
 https://stackoverflow.com/questions/11928566/img-vs-image-tag-in-html
+
+https://developer.mozilla.org/en-US/docs/Web/API/Element
+
+https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d
+
+https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement
+
+https://developer.mozilla.org/en-US/docs/Web/API/SVGForeignObjectElement
+
+https://developer.mozilla.org/en-US/search?q=foreignobject
+
+https://developer.mozilla.org/en-US/play
+
+https://www.blackbox.ai/chat/mVasYcz
+
+https://www.youtube.com/watch?v=FCuNtCq3nRg
+
+https://www.youtube.com/watch?v=9Kr3T4Ndl-o
+
+https://www.youtube.com/watch?v=emFMHH2Bfvo
+
+https://www.youtube.com/watch?v=kYZVXFrMC5o
+
+https://www.youtube.com/results?search_query=image+windowed+html
+
+https://webdesign.tutsplus.com/how-to-create-a-frosted-glass-effect-in-css--cms-32535t
+
+
+BLACKBOX AI PROMPR TEXT
+i have an image in the background of a div, i have to put some squares divs on it and the image should be completely covered by the divs making exeption for some that can see through it and actually see the image, how can i achieve this?
