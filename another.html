@@ -7,25 +7,12 @@
     <link rel="stylesheet" href="another.css">
 </head>
     <body>
-        <!-- <div style="position: relative; width: 500px; height: 500px;">
-            <svg width="100%" height="100%">
-                <mask id="mask" width="200" height="60">
-                    <rect x="0" y="0" width="100%" height="100%" class="inv" />
-                    
-                    <rect x="10" y="10" width="50" height="50" fill="#f20000" />
-                    <rect x="70" y="10" width="50" height="50" fill="#fff" /> 
-                    <rect x="130" y="10" width="50" height="50" fill="#f20000"/>  
-                </mask>
-                
-                <image xlink:href="image.png" width="100%" height="100%" mask="url(#mask)" />
-            </svg>
-        </div> -->
-
         <div class="container">
             <svg width="100%" height="100%">
                 <defs>
                     <mask id="mmm">
                         <rect x="0" y="0" width="100%" height="100%" fill="rgb(0, 0, 0, 0)"></rect>
+
                         <rect class="col" x="10" y="10" width="50" height="50"></rect>
                         <rect class="col" x="70" y="10" width="50" height="50"></rect>
                     </mask>
@@ -33,11 +20,16 @@
 
                 <image href="image.png" mask="url(#mmm)"></image>
 
-                <rect fill="black" x="130" y="10" width="50" height="50"></rect>
+                <g>
+                    <!-- <rect fill="black" x="130" y="10" width="50" height="50"></rect> -->
+                    <!-- <foreignObject x="130" y="10" width="100" height="100">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="roberto">
+                            <div>TestContent</div>
+                        </div>
+                    </foreignObject> -->
+                </g>    
                 
             </svg>
         </div>
-
-        <img src="image.png" alt="pippo">
     </body>
 </html>
