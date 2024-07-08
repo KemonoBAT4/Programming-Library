@@ -1,11 +1,25 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px; /* Space between squares */
     padding: 20px;
-    background-image: url('image.png');
+    /* background-image: url('image.png'); */
     background-size: cover;
     background-position: center;
+    background-color: #ff0000;
     width: 600px;
     height: auto;
 }
@@ -16,6 +30,7 @@
     border: 10px solid transparent;
     background-clip: padding-box; /* Prevents the border from covering the gap color */
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .square.visible {
@@ -23,10 +38,13 @@
 }
 
 .square.invisible {
-    background-color: transparent; /* Make square transparent */
+    background-color: yellow; /* Make square transparent */
     /* border: 1px red;  */
 }
 
-.container.with-invisible {
-    background-color: #ff0000; /* Red background when there are invisible squares */
+.svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }

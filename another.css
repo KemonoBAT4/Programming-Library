@@ -1,0 +1,46 @@
+/* div {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+mask {
+    width: 300px;
+    height: 300px;
+}
+
+mask rect {
+    fill: #fff;
+}
+
+mask rect:nth-child(2n) {
+    fill: #000;
+}
+
+mask rect:nth-child(2n+1) {
+    fill: #fff;
+}    */
+
+.container {
+    width: 500px;
+    height: 300px;
+    /* background-image: url(image.png); */
+    background-color: #4b4c54;
+    
+}
+
+.container svg {
+    --mask-color: white;
+}
+
+.container svg mask rect.col {
+    fill: var(--mask-color);
+}
