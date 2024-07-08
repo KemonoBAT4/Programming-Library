@@ -71,5 +71,29 @@ https://www.youtube.com/results?search_query=image+windowed+html
 https://webdesign.tutsplus.com/how-to-create-a-frosted-glass-effect-in-css--cms-32535t
 
 
+https://jsfiddle.net/Wayou/n7y1c4mg/6/
+
+svg center image in group
+
+https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Transformations
+
+https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox
+
+https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAspectRatio
+
+https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAspectRatio
+
+https://www.shecodes.io/athena/67627-how-to-align-an-svg-image-with-text-in-css
+
+https://developer.mozilla.org/en-US/docs/Web/SVG
+
+https://www.w3schools.com/css/css3_masking.asp
+
+https://www.w3schools.com/css/tryit.asp?filename=trycss3_mask-image5
+
+https://www.w3schools.com/css/tryit.asp?filename=trycss3_mask-image
+
+https://jsfiddle.net/helderdarocha/BVgr4/
+
 BLACKBOX AI PROMPR TEXT
 i have an image in the background of a div, i have to put some squares divs on it and the image should be completely covered by the divs making exeption for some that can see through it and actually see the image, how can i achieve this?
