@@ -97,3 +97,42 @@ https://jsfiddle.net/helderdarocha/BVgr4/
 
 BLACKBOX AI PROMPR TEXT
 i have an image in the background of a div, i have to put some squares divs on it and the image should be completely covered by the divs making exeption for some that can see through it and actually see the image, how can i achieve this?
+
+
+/**
+ * recreates the url by removing unwanted url routes
+ * and adding the completed route at the end
+ * @param {string} url the url you want to recreate
+ * @param {number} number the number of routes you wanto to go backward
+ * @param {string} add the completed route (without the / in front) you want to add at the end
+ * @returns the completed url
+ */
+function recreateUrl(url, number, add) {
+
+    //      [0]        [1]
+    // ex: http:  127.0.0.1:5000/example/1
+    let items = url.split("//");
+    let connecton_type = items[0];
+    let remaining_url = items[1];
+    let baseUrl = connecton_type + "//" +  remaining_url.split("/")[0];
+
+    if( remaining_url.split("/").length >= 1 ) {
+        split = remaining_url.split("/");
+
+        length = split.length - 1;
+
+        if(length > number) {
+            let add_quantity = length - number;
+            let new_url = baseUrl;
+
+            for(let i = 0; i < add_quantity; i++) {
+                new_url += "/" + split[i + 1];
+            }
+
+            new_url += "/" + add;
+            return (new_url)
+        }
+    }
+    return ( baseUrl + "/" + add );
+}
+
