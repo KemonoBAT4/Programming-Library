@@ -11,15 +11,29 @@ router.get("/home", async(req, res) => {
     res.render("home");
 });
 
+// display all languages in the library
 router.get("/languages", async(req, res) => {
     res.render("list"); // FIXME: add type: language
 });
 
+// create a new language
 router.get("/language/new", async(req, res) => {
-    res.render("new") // FIXME: add type: language
+    res.render("new"); // FIXME: add type: language
+});
+
+// edit a language
+router.get("language/edit/:language", async(req, res) => {
+    res.render("edit"); // FIXME: add type: language
+});
+
+// open the settings for a language (permissions, 
+router.get("/setting/:language", async(req, res) => {
+    res.render("settings"); // FIXME: not implemented yet
 })
 
-router.get("/search")
+router.get("/search", async(req, res) => {
+    res.render("search");
+})
 
 // ------ TODO: add page routes here ------ //
 
