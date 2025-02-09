@@ -1,0 +1,37 @@
+/* --- GENERAL CSS HERE --- */
+
+/*
+    this css file is only for the general css of the project
+    modifying this will affect the whole project pages
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.header-container {
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: green;
+}
+
+.main-container {
+
+}
+
+.footer-container {
+
+}
+

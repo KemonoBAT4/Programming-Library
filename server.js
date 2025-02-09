@@ -14,10 +14,10 @@ app.use(express.json()); // TODO: see if this line is usefull
 app.use(cors());
 
 // Client static folders
-app.use("/css", express.static(__dirname + "public/css"));
-app.use("/json", express.static(__dirname + "public/css"));
-app.use("/js", express.static(__dirname + "public/css"));
-app.use("/library", express.static(__dirname + "public/css"));
+app.use(express.static('src/resources')); // defines the base path
+
+app.use("/css", express.static(__dirname + "css")); // defines the path for css
+app.use("/js", express.static(__dirname + "js")); // defines the path for js
 
 // Ejs engine
 app.set("views", "./src/views");
