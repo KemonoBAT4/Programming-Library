@@ -50,7 +50,7 @@ function recreate_url(url, number, add) {
  * @param {json} body the body data
  * @returns response: the response data from the fetch
  */
-async function _fetch(url, method="GET", headers={}, body={}) {
+async function fetch(url, method="GET", headers={}, body={}) {
 
     let response = await fetch(url, {
         method: method,
