@@ -21,15 +21,18 @@ app.use("/js", express.static(__dirname + "js")); // defines the path for js
 app.use("/assets", express.static(__dirname + "assets")); // defines the path for assets
 app.use("/library", express.static(__dirname + "libraries")); // defines the path for library
 
+// Languages static folders
+app.use("/languages", express.static("languages")); // TODO: see if this line is correct
+
 // Ejs engine
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
-
+// Routes
 app.use("/", page_router);
 app.use("/api", api_router);
 
-
+// Server
 app.listen(port, ()=> {
     console.log(`listening on port: ${port}`)
 })

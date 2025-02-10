@@ -31,9 +31,12 @@ router.get("/setting/:language", async(req, res) => {
     res.render("settings"); // FIXME: not implemented yet
 })
 
-router.get("/search", async(req, res) => {
-    res.render("search");
+router.get("/search/:query", async(req, res) => {
+    res.render("search", { query: req.params.query });
 })
+// router.get("/search", async(req, res) => {
+//     res.render("search");
+// })
 
 // ------ TODO: add page routes here ------ //
 
