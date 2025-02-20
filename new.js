@@ -22,6 +22,7 @@ function on_submit() {
 		
 	}else {
 		not_validated();
+	}
 }
 
 

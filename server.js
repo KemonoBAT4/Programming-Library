@@ -34,7 +34,5 @@ app.use("/api", api_router);
 
 // Server
 app.listen(port, ()=> {
-    console.log(`listening on port: ${port}`)
+    console.log(`listening on port: ${port}`);
 })
-
-
