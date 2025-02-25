@@ -3,8 +3,6 @@
 .logo-container {
     width: 10%;
     height: 100%;
-
-    /* background-color: black; */
 }
 
 .title-container {
@@ -32,9 +30,6 @@
 
     justify-content: center;
     align-items: center;
-
-    /* background-color: yellow; */
-
 }
 
 .search-input {
