@@ -19,7 +19,7 @@ async function get_snippet_from_api() {
  * and the settings section
  * @param {*} container the container element for the page
  */
-async function render_header(container=undefined) {
+export async function render_header(container=undefined) {
     // creates the header container and logic
     let header_container = document.createElement("div");
     header_container.classList.add("header-container");
@@ -78,7 +78,7 @@ async function render_header(container=undefined) {
  * renders the footer in the container passed as a parameter
  * @param {*} container the container element for the page
  */
-async function render_footer(container=undefined) {
+export async function render_footer(container=undefined) {
 
     if (container === undefined) {
         return false;
