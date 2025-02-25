@@ -20,6 +20,7 @@ app.use("/css", express.static(__dirname + "css")); // defines the path for css
 app.use("/js", express.static(__dirname + "js")); // defines the path for js
 app.use("/assets", express.static(__dirname + "assets")); // defines the path for assets
 app.use("/library", express.static(__dirname + "libraries")); // defines the path for library
+app.use("/svg", express.static(__dirname + "svg")); // defines the path for svg
 
 // Languages static folders
 app.use("/languages", express.static("languages")); // TODO: see if this line is correct
