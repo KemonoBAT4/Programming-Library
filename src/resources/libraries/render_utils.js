@@ -20,6 +20,11 @@ async function get_snippet_from_api() {
  * @param {*} container the container element for the page
  */
 export async function render_header(container=undefined) {
+
+    if (container === undefined) {
+        return false;
+    }
+
     // creates the header container and logic
     let header_container = document.createElement("div");
     header_container.classList.add("header-container");
@@ -73,6 +78,8 @@ export async function render_header(container=undefined) {
 
     header_container.append(logo_container, title_container, search_container, settings_container);
     container.append(header_container);
+
+    return true;
 }
 
 /**
