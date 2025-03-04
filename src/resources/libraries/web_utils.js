@@ -1,7 +1,4 @@
-/**
- * @name Js-Library
- * @author Kemono_BAT_4
- */
+
 
 /**
  * recreates the url by removing unwanted url routes
@@ -11,7 +8,7 @@
  * @param {string} add the completed route (without the / in front) you want to add at the end
  * @returns the completed url
  */
-function recreate_url(url, number, add) {
+export function recreate_url(url, number, add) {
 
     //      [0]        [1]
     // ex: http:  127.0.0.1:5000/example/1
@@ -68,7 +65,7 @@ async function _fetch(url, method="GET", headers={}, body={}) {
  * @param {json} body the body data
  * @returns response: the response data from the fetch
  */
-async function post_fetch(url, headers={}, body={}) {
+export async function post_fetch(url, headers={}, body={}) {
 
     return await _fetch(url, "POST", headers, body);
 }
@@ -80,7 +77,7 @@ async function post_fetch(url, headers={}, body={}) {
  * @param {json} body the body data
  * @returns response: the response data from the fetch
  */
-async function get_fetch(url, headers={}, body={}) {
+export async function get_fetch(url, headers={}, body={}) {
 
     return await _fetch(url, "GET", headers, body);
 }
@@ -92,7 +89,7 @@ async function get_fetch(url, headers={}, body={}) {
  * @param {json} body the body data
  * @returns response: the response data from the fetch
  */
-async function delete_fetch(url, headers={}, body={}) {
+export async function delete_fetch(url, headers={}, body={}) {
 
     return await _fetch(url, "DELETE", headers, body);
 }
@@ -104,9 +101,7 @@ async function delete_fetch(url, headers={}, body={}) {
  * @param {json} body the body data
  * @returns response: the response data from the fetch
  */
-async function put_fetch(url, headers={}, body={}) {
+export async function put_fetch(url, headers={}, body={}) {
 
     return await _fetch(url, "PUT", headers, body);
 }
-
-export { recreate_url, post_fetch, get_fetch, delete_fetch, put_fetch }

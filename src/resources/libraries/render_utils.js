@@ -35,6 +35,7 @@ export async function render_header(container=undefined) {
     let title_text = document.createElement("span");
     title_text.classList.add("title");
     title_text.innerText = "Programming library";
+    title_container.append(title_text);
 
     // creates the search container and logic
     let search_container = document.createElement("div");
@@ -125,4 +126,3 @@ export async function render_footer(container=undefined) {
     container.append(footer_container);
     return true;
 }
-
