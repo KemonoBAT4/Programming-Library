@@ -28,6 +28,10 @@ api.get("/home", async(req, res) => {
     // res.send({"status": "ok"})
 });
 
+api.get("/search/:search", async(req, res) => {
+    // res.send({"status": "ok"})
+})
+
 // ------ TODO: add api routes here ------ //
 
 

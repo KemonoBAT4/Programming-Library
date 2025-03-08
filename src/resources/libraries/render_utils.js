@@ -17,7 +17,7 @@ async function get_snippet_from_api() {
 /**
  * renders the header in the container passed as a parameter
  * and the settings section
- * @param {*} container the container element for the page
+ * @param {Element} container the container element for the page
  */
 export async function render_header(container=undefined) {
 
@@ -37,10 +37,14 @@ export async function render_header(container=undefined) {
     let title_container = document.createElement("div");
     title_container.classList.add("title-container");
 
+    let title_hyperlink = document.createElement("a");
+    title_hyperlink.href = "/home";
+
     let title_text = document.createElement("span");
     title_text.classList.add("title");
     title_text.innerText = "Programming library";
-    title_container.append(title_text);
+    title_hyperlink.append(title_text);
+    title_container.append(title_hyperlink);
 
     // creates the search container and logic
     let search_container = document.createElement("div");
@@ -60,6 +64,15 @@ export async function render_header(container=undefined) {
     search_icon.src = "/svg/search.svg";
     search_icon.alt = "SearchIcon";
     search_button.append(search_icon);
+
+    search_button.addEventListener("click", async(event) => {
+        event.preventDefault();
+
+        let value = search_input.value;
+        search_input.value = "";
+        window.location.href = `/search/${value}`;
+    });
+
     search_container.append(search_input, search_button);
 
     // creates the settings container and logic
@@ -84,7 +97,7 @@ export async function render_header(container=undefined) {
 
 /**
  * renders the footer in the container passed as a parameter
- * @param {*} container the container element for the page
+ * @param {Element} container the container element for the page
  */
 export async function render_footer(container=undefined) {
 
@@ -132,4 +145,36 @@ export async function render_footer(container=undefined) {
 
     container.append(footer_container);
     return true;
+}
+
+/**
+ * renders the search item that will be used in the search page
+ * showing a title, description, author, and last update date.
+ * The item will be clickable and will render a new page with the content
+ * @param {Element} container the container element for the apge
+ * @param {JSON} item the json item of the search
+ */
+export async function render_search_item(container=undefined, item=undefined) {
+
+    if (container === undefined) {
+        return false;
+    }
+
+    if (item === undefined) {
+        item = {
+            "title": "No item found",
+            "language": "none",
+            "description": "This is an empty description, probably caused by a bad search",
+            "author_uid": "none",
+            "last_update": `${new Date().getDate()}/${(new Date().getMonth() + 1)}/${new Date().getFullYear()}`,
+        };
+    }
+
+    let search_item = document.createElement("div");
+    search_item.classList.add("search-item");
+
+    let title_container = document.createElement("div");
+    title_container.classList.add("search-item-title-container");
+
+    container.append(search_item);
 }
