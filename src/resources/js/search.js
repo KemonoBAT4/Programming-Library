@@ -20,8 +20,8 @@ async function searchQuery(search) {
     let headers = {
         "Content-Type": "application/json"
     }; // headers of the request
-    let body = {}; // body of the request
-    let response = await get_fetch(url, headers, body); // makes the request
+    // let body = {}; // body of the request
+    let response = await get_fetch(url, headers); // makes the request
 
     let search_container = document.querySelector("."); // content container
 }
@@ -34,7 +34,7 @@ async function searchQuery(search) {
 document.addEventListener("DOMContentLoaded", async(event) => {
     event.preventDefault();
     // console.log(`from search.js: ${search}`);
-    completed = await loadPage(search);
+    let completed = await loadPage(search);
     if (completed == true) {
         console.log(`Completed: ${completed}`);
 
@@ -49,7 +49,7 @@ async function loadPage() {
     let footer_container = document.querySelector(".pl-footer-container") || undefined;
 
     await render_header(header_container);
-    await render_footer(footer_container);
+    // await render_footer(footer_container);
 
     return true;
 }

@@ -47,12 +47,16 @@ export function recreate_url(url, number, add) {
  * @param {json} body the body data
  * @returns response: the response data from the fetch
  */
-async function _fetch(url, method="GET", headers={}, body={}) {
+async function _fetch(url, method="GET", headers={}, body=undefined) {
+
+    if (body != undefined) {
+        body = JSON.stringify(body);
+    }
 
     let response = await fetch(url, {
         method: method,
         headers: headers,
-        body: JSON.stringify(body)
+        body: body
     }).then(res => res.json());
 
     return response;
@@ -77,9 +81,9 @@ export async function post_fetch(url, headers={}, body={}) {
  * @param {json} body the body data
  * @returns response: the response data from the fetch
  */
-export async function get_fetch(url, headers={}, body={}) {
+export async function get_fetch(url, headers={}) {
 
-    return await _fetch(url, "GET", headers, body);
+    return await _fetch(url, "GET", headers);
 }
 
 /**

@@ -70,7 +70,10 @@ export async function render_header(container=undefined) {
 
         let value = search_input.value;
         search_input.value = "";
-        window.location.href = `/search/${value}`;
+
+        if (value !== "") {
+            window.location.href = `/search/${value}`;
+        }
     });
 
     search_container.append(search_input, search_button);
