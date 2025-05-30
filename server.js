@@ -1,7 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const { port } = require("./src/settings/config");
+const { config_port } = require("./src/settings/config");
+const port = process.env.PORT || config_port;
 
 // Application
 const app = express();
