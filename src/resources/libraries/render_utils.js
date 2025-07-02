@@ -1,3 +1,7 @@
+/**
+ * RENDER LIBRARY
+ * @author: Kemono_BAT_4
+ */
 
 const API_URL = `http://127.0.0.1:23104/api/v`;
 

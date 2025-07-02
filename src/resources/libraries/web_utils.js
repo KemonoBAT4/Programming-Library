@@ -1,4 +1,7 @@
-
+/**
+ * WEB LIBRARY
+ * @author: Kemono_BAT_4
+ */
 
 /**
  * recreates the url by removing unwanted url routes
