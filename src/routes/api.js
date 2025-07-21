@@ -32,6 +32,12 @@ api.get("/search/:search", async(req, res) => {
     // res.send({"status": "ok"})
 })
 
+api.get("/trending", async(req, res) => {
+    // res.send({"status": "ok"})
+});
+
+api.get("")
+
 // ------ TODO: add api routes here ------ //
 
 
